@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Neuton-Regular
+font link: https://fonts.google.com/specimen/Neuton
+font author: Brian Zick
+font author site: https://brianskywalker.deviantart.com/
+
+
+icon designer: marta michalowska
+icon designer link: /creator/mmichalowska/
+        
+{"bg":"#00242C","icon":"#81E291","font":"#FFFFFF","slogan":"#ffffff"}
+      
