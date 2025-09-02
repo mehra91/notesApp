@@ -25,13 +25,13 @@ const AddNote = ({ sendDataToParent }) => {
 
   return (
     <form
-      className="bg-white p-4 rounded-xl shadow-md max-w-sm mx-auto"
+      className="bg-gray-600 p-4 rounded-xl shadow-md max-w-sm mx-auto"
       onSubmit={handleCreate}
     >
       <div className="relative">
         <button
           type="button"
-          className="absolute top-1 right-1 text-gray-500 hover:text-yellow-500"
+          className="absolute top-1 right-1 text-gray-500  "
         >
           <BsPinAngle size={20} />
         </button>
@@ -40,7 +40,7 @@ const AddNote = ({ sendDataToParent }) => {
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full border-b border-gray-300 py-1 mb-2 outline-none"
+          className="w-full border-b border-black py-1 mb-2 outline-none"
         />
       </div>
 
@@ -49,7 +49,7 @@ const AddNote = ({ sendDataToParent }) => {
         placeholder="Take a note..."required
         value={body}
         onChange={(e) => setBody(e.target.value)}
-        className="w-full border-b border-gray-300 mb-2 p-1 outline-none resize-none"
+        className="w-full border-b border-black mb-2 p-1 outline-none resize-y "
       ></textarea>
 
       <div className="mb-2 flex gap-2 text-sm">
