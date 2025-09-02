@@ -9,15 +9,17 @@ const AddNote = ({ sendDataToParent }) => {
   const handleCreate = (e) => {
     e.preventDefault();
 
-    
+    // prevent empty note
+    if (!title.trim() && !body.trim()) return;
+
+    // parent ko note bhej do
     sendDataToParent({
       title,
       body,
       priority,
- 
-
     });
- 
+
+    // reset form
     setTitle("");
     setBody("");
     setPriority("Normal");
@@ -31,7 +33,7 @@ const AddNote = ({ sendDataToParent }) => {
       <div className="relative">
         <button
           type="button"
-          className="absolute top-1 right-1 text-gray-500  "
+          className="absolute top-1 right-1 text-gray-500"
         >
           <BsPinAngle size={20} />
         </button>
@@ -46,17 +48,17 @@ const AddNote = ({ sendDataToParent }) => {
 
       <textarea
         rows="2"
-        placeholder="Take a note..."required
+        placeholder="Take a note..."
         value={body}
         onChange={(e) => setBody(e.target.value)}
-        className="w-full border-b border-black mb-2 p-1 outline-none resize-y "
+        className="w-full border-b border-black mb-2 p-1 outline-none resize-y"
       ></textarea>
 
       <div className="mb-2 flex gap-2 text-sm">
-        <label >
+        <label>
           <input
             type="radio"
-            value="Normal" required
+            value="Normal"
             checked={priority === "Normal"}
             onChange={(e) => setPriority(e.target.value)}
           />{" "}
@@ -65,7 +67,7 @@ const AddNote = ({ sendDataToParent }) => {
         <label>
           <input
             type="radio"
-            value="Important" required
+            value="Important"
             checked={priority === "Important"}
             onChange={(e) => setPriority(e.target.value)}
           />{" "}
@@ -74,7 +76,7 @@ const AddNote = ({ sendDataToParent }) => {
         <label>
           <input
             type="radio"
-            value="Most Important" required
+            value="Most Important"
             checked={priority === "Most Important"}
             onChange={(e) => setPriority(e.target.value)}
           />{" "}
